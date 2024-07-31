@@ -69,6 +69,11 @@
             bindings = <&kp LC(Z)>;
             key-positions = <22 21>;
         };
+
+        PrintScreen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <36 33>;
+        };
     };
 
     macros {
@@ -86,30 +91,30 @@
         Base {
             label = "Base";
             bindings = <
-              &kp Q        &kp W       &kp E          &kp R         &kp T        &mt LC(Y) Y       &kp U        &kp I           &kp O       &mt PRINTSCREEN P
-              &hm LGUI A   &hm LALT S  &hm LCTRL D    &hm LSHIFT F  &kp G        &kp H             &hm RSHFT J  &hm RCTRL K     &hm RALT L  &hm RGUI SEMICOLON
-&lt 3 ESCAPE  &mt LC(Z) Z  &kp X       &mt LC(C) C    &mt LC(V) V   &kp B        &mt LANGUAGE_5 N  &kp M        &kp COMMA       &kp DOT     &mt MINUS SLASH     &kp APOSTROPHE
-                                       &mt LCTRL DEL  &lt 1 TAB     &kp SPACE    &kp RET           &lt 2 BSPC   &kp LEFT_SHIFT
+              &kp Q        &kp W       &kp E        &kp R                    &kp T        &mt LC(Y) Y       &kp U          &kp I        &kp O       &kp P
+              &hm LGUI A   &hm LALT S  &hm LCTRL D  &hm LSHIFT F             &kp G        &kp H             &hm RSHFT J    &hm RCTRL K  &hm RALT L  &hm RGUI SEMICOLON
+&lt 3 ESCAPE  &mt LC(Z) Z  &kp X       &mt LC(C) C  &mt LC(V) V              &kp B        &mt LANGUAGE_5 N  &kp M          &kp COMMA    &kp DOT     &mt DOUBLE_QUOTES SQT  &mt SLASH MINUS
+                                       &lt 2 TAB    &mt LEFT_CONTROL DELETE  &kp SPACE    &kp RET           &kp BACKSPACE  &to 1
             >;
         };
 
         Nav {
             label = "Nav";
             bindings = <
-              &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR            &kp RPAR           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                         &trans        &trans     &trans              &trans             &trans        &kp DOT
+        &kp TILDE       &trans    &trans    &trans            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+        &trans          &trans    &kp UP    &trans            &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&trans  &kp LEFT_SHIFT  &kp LEFT  &kp DOWN  &kp RIGHT         &kp LPAR            &kp RPAR           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
+                                  &tog 0    &kp LEFT_CONTROL  &trans              &trans             &trans        &to 2
             >;
         };
 
         Media_Character {
             label = "Media_Character";
             bindings = <
-            &kp EXCL           &kp AT           &kp HASH          &kp DOLLAR            &kp PERCENT             &kp CARET        &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT     &kp DQT
-            &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_PP          &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC    &kp PRINTSCREEN  &kp INS        &kp UP           &kp INSERT  &trans
-&kp C_MUTE  &kp EQUAL          &kp LEFT_SHIFT   &kp LEFT_CONTROL  &kp LEFT_ALT          &mo 3                   &mo 4            &kp LEFT       &kp DOWN         &kp RIGHT   &kp MINUS  &kp HOME
-                                                &trans            &trans                &trans                  &trans           &trans         &trans
+        &kp EXCL  &kp AT      &kp HASH        &kp DOLLAR               &kp PERCENT             &kp CARET        &kp AMPERSAND      &kp KP_ASTERISK  &kp SQT          &kp DQT
+        &trans    &kp C_MUTE  &kp C_PP        &kp C_BRIGHTNESS_DEC     &kp C_BRIGHTNESS_INC    &kp PRINTSCREEN  &kp C_VOLUME_DOWN  &kp UP           &kp C_VOLUME_UP  &trans
+&trans  &trans    &trans      &kp LEFT_SHIFT  &kp LEFT_CONTROL         &kp LEFT_ALT            &trans           &kp LEFT           &kp DOWN         &kp RIGHT        &trans   &trans
+                              &tog 0          &mt LEFT_CONTROL DELETE  &trans                  &trans           &trans             &to 3
             >;
         };
 
@@ -118,8 +123,8 @@
             bindings = <
         &bootloader  &bt BT_CLR  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
         &trans       &bt BT_NXT  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans       &bt BT_PRV  &trans  &trans  &to 4     &trans  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13
-                                 &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans       &bt BT_PRV  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &kp F13
+                                 &tog 0  &trans  &trans    &trans  &trans  &to 4
             >;
         };
 
@@ -128,7 +133,7 @@
         &trans  &trans  &trans  &trans            &trans          &trans  &trans    &trans    &trans     &trans
         &trans  &trans  &trans  &kp LEFT_SHIFT    &trans          &trans  &trans    &kp UP    &trans     &trans
 &trans  &trans  &trans  &trans  &kp LEFT_CONTROL  &kp LEFT_ALT    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-                        &trans  &trans            &trans          &trans  &trans    &trans
+                        &tog 0  &trans            &trans          &trans  &trans    &to 1
             >;
 
             label = "Gaming";
