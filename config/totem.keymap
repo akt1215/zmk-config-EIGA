@@ -26,10 +26,10 @@
 #define Gameplus    9
 
 &mt {
-    quick-tap-ms = <100>;
+    quick-tap-ms = <125>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <250>;
 };
 
 &lt {
@@ -45,7 +45,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <248>;
             quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
@@ -96,20 +96,20 @@
         Base {
             label = "Base";
             bindings = <
-                                        &kp Q  &kp W  &kp E        &kp R                    &kp T             &kp Y           &kp U          &kp I        &kp O    &kp P
-                                        &kp A  &kp S  &hm LCTRL D  &hm LSHIFT F             &hm LEFT_GUI G    &hm LEFT_GUI H  &hm RSHFT J    &hm RCTRL K  &kp L    &hm RS(N2) RS(N7)
-&mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp Z  &kp X  &kp C        &kp V                    &kp B             &kp N           &kp M          &kp COMMA    &kp DOT  &kp SLASH          &hm DOUBLE_QUOTES MINUS
-                                                      &to 2        &mt LEFT_CONTROL DELETE  &kp SPACE         &kp RET         &kp BACKSPACE  &to 1
+                                        &kp Q  &kp W  &kp E        &kp R           &kp T             &kp Y           &kp U          &kp I        &kp O    &kp P
+                                        &kp A  &kp S  &hm LCTRL D  &hm LSHIFT F    &hm LEFT_GUI G    &hm LEFT_GUI H  &hm RSHFT J    &hm RCTRL K  &kp L    &hm QUESTION SQT
+&mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &kp Z  &kp X  &kp C        &kp V           &kp B             &kp N           &kp M          &kp COMMA    &kp DOT  &kp SLASH         &hm RIGHT_CONTROL MINUS
+                                                      &to 2        &mt DELETE TAB  &kp SPACE         &kp RET         &kp BACKSPACE  &to 1
             >;
         };
 
         Nav {
             label = "Nav";
             bindings = <
-        &kp TILDE       &trans    &kp UP    &trans            &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-        &trans          &kp LEFT  &kp DOWN  &kp RIGHT         &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&trans  &kp LEFT_SHIFT  &trans    &trans    &trans            &kp LPAR            &kp RPAR           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                  &to 0     &kp LEFT_CONTROL  &trans              &trans             &trans        &to 2
+        &kp TILDE       &trans    &kp UP    &trans     &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+        &trans          &kp LEFT  &kp DOWN  &kp RIGHT  &kp LEFT_BRACE      &kp RIGHT_BRACE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&trans  &kp LEFT_SHIFT  &trans    &trans    &trans     &kp LPAR            &kp RPAR           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
+                                  &to 0     &trans     &trans              &trans             &trans        &to 2
             >;
         };
 
