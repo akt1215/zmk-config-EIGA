@@ -155,7 +155,7 @@
             bindings = <
            &kp Q  &kp W  &kp E                &mt F4 R        &kp T             &kp Y           &mt F10 U      &kp I        &kp O    &kp P
            &kp A  &kp S  &hm LCTRL D          &hm LSHIFT F    &hm LEFT_GUI G    &hm LEFT_ALT H  &hm RSHFT J    &hm RCTRL K  &kp L    &hm QUESTION SQT
-&lt 2 ESC  &kp Z  &kp X  &kp C                &kp V           &kp B             &kp N           &kp M          &kp COMMA    &kp DOT  &mt BACKSLASH SLASH  &mt RCTRL MINUS
+&lt 2 ESC  &kp Z  &kp X  &kp C                &kp V           &kp B             &kp N           &kp M          &kp COMMA    &kp DOT  &mt BACKSLASH SLASH  &mt RIGHT_WIN MINUS
                          &mt EQUAL SEMICOLON  &mt DELETE TAB  &lt 1 SPACE       &kp ENTER       &kp BACKSPACE  &to 1
             >;
         };
